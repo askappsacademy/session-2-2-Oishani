@@ -11,6 +11,21 @@ const run = function () {
   // hint 1: how do we loop through items in JavaScript
 
   // hint 2: use how do we create an element and append an element?
+
+  document.getElementById('shopping-cart').innerText = 'Fruit Cart';
+
+  var ol = document.createElement('ol');
+  ol.setAttribute('id', 'cart');
+  document.body.appendChild(ol);
+  var cartlist = document.getElementById('cart');
+
+  for (let i = 0; i < fruits.length; i++) {
+    const li = document.createElement('li');
+    const text = document.createTextNode(fruits[i]);
+    console.log(text);
+    li.appendChild(text);
+    cartlist.appendChild(li);
+  }
 };
 
 run();
